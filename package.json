@@ -1,0 +1,9 @@
+{
+  "name": "oauth-proxy",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.3.5",
+    "oauth-shim": "^0.2.1"
+  }
+}
