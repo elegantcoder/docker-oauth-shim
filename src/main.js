@@ -11,5 +11,9 @@ console.log("Client IDs", Object.keys(oauthShimConfig))
 oauthShim.init(oauthShimConfig)
 
 var app = express()
+app.all('/', function (req, res, next) {
+  console.log(req.method + ' ' +req.originalUrl);
+  next();
+})
 app.all('/', oauthShim);
 app.listen(80)
