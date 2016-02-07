@@ -11,5 +11,5 @@ console.log("Client IDs", Object.keys(oauthShimConfig))
 oauthShim.init(oauthShimConfig)
 
 var app = connect()
-app.all('/', oauthshim);
+app.all('/', oauthShim);
 app.listen(80)
