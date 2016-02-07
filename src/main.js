@@ -1,4 +1,4 @@
-var connect = require("connect")
+var express = require("express")
 var oauthShim = require("oauth-shim")
 
 var oauthShimConfig = JSON.parse(process.env.OAUTH)
@@ -10,6 +10,6 @@ console.log("Client IDs", Object.keys(oauthShimConfig))
 
 oauthShim.init(oauthShimConfig)
 
-var app = connect()
-app.all('/', oauthShim);
+var app = express()
+app.use('/', oauthShim);
 app.listen(80)
